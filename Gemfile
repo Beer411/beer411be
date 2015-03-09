@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-# Pry for testing things
-gem 'pry'
+
 # Devise for User Auth
 gem 'devise'
+# We love our frontenders
+gem 'rack-cors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -44,4 +45,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Pry for testing things
+  gem 'pry'
 end
