@@ -32,3 +32,60 @@
   }
 }
 ```
+
+## Create a Beer
+
+### /beers
+
+###### Required params
+
+* auth_token
+* beer: {name: name}
+
+###### Optional Params
+
+* beer: {flavor_profile1: flavor_profile1, flavor_profile2: flavor_profile2,
+  flavor_profile3: flavor_profile3, flavor_profile4: flavor_profile4,
+  flavor_profile5: flavor_profile5, kind: kind, description: description, brewery: brewery }
+
+```
+{
+  "beer": {
+  "id": 1,
+  "name": "Sweetwater 420",
+  "flavor_profile1": "Hoppy",
+  "flavor_profile2": "Delicious",
+  "flavor_profile3": "Fruity",
+  "flavor_profile4": "Refreshing",
+  "flavor_profile5": "Tasty",
+  "description": "This is an awesome beer",
+  "kind": "Extra Pale Ale",
+  "brewery": "Sweetwater",
+  "created_at": "2015-03-09T21:57:27.447Z",
+  "updated_at": "2015-03-09T21:57:27.447Z"
+  }
+}
+```
+
+# Show a Specific Beer
+
+## /beers/:id
+
+```
+{
+  "beer": {
+  "id": 1,
+  "name": "Sweetwater 420",
+  "flavor_profile1": "Hoppy",
+  "flavor_profile2": "Delicious",
+  "flavor_profile3": "Fruity",
+  "flavor_profile4": "Refreshing",
+  "flavor_profile5": "Tasty",
+  "description": "This is an awesome beer",
+  "kind": "Extra Pale Ale",
+  "brewery": "Sweetwater",
+  "created_at": "2015-03-09T21:57:27.447Z",
+  "updated_at": "2015-03-09T21:57:27.447Z"
+  }
+}
+```
