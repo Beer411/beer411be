@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
   resources :beers, only: [:create, :update, :show]
-  get '/beer/index', to: 'beer#index', as: 'beers_index'
+  get '/beers/list', to: 'beers#list', as: 'beers_list'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

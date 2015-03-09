@@ -16,11 +16,11 @@ class BeersController < ApplicationController
     render json: { beer: @beer }
   end
 
-  def index
+  def list
     @beer = Beer.all
     render json: { beer: @beer }
   end
-  
+
 private
   def beer_params
     params.require(:beer).permit(:name,
