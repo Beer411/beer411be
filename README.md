@@ -7,22 +7,28 @@
 
 ###### Required params
 
-* user {email: email, password: password}
+* user: {email: email, password: password}
+```
 {
   "user": {
   "email": "b@b.com",
   "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
   }
 }
+```
 
 ## User Sign In
 
 ### /users/sign_in
 
-* user {email: email, password: password}
+###### Required params
+
+* user: {email: email, password: password}
+```
 {
   "user": {
   "email": "b@b.com",
   "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
   }
 }
+```
