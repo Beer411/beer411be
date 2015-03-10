@@ -1,4 +1,4 @@
-# Heroku Link: https://calm-scrubland-8623.herokuapp.com
+## Heroku Link: https://calm-scrubland-8623.herokuapp.com
 
 
 ## User Registration
@@ -67,9 +67,9 @@
 }
 ```
 
-# Show a Specific Beer
+## Show a Specific Beer
 
-## /beers/:id
+### /beers/:id
 
 ```
 {
@@ -87,5 +87,43 @@
   "created_at": "2015-03-09T21:57:27.447Z",
   "updated_at": "2015-03-09T21:57:27.447Z"
   }
+}
+```
+
+## Show a List of Beers
+
+### /beers/list
+```
+{
+  "beer": [
+  {
+    "id": 1,
+    "name": "Sweetwater 420",
+    "flavor_profile1": "Hoppy",
+    "flavor_profile2": "Delicious",
+    "flavor_profile3": "Fruity",
+    "flavor_profile4": "Refreshing",
+    "flavor_profile5": "Tasty",
+    "description": "This is an awesome beer",
+    "kind": "Extra Pale Ale",
+    "brewery": "Sweetwater",
+    "created_at": "2015-03-09T21:57:27.447Z",
+    "updated_at": "2015-03-09T21:57:27.447Z"
+  },
+  {
+    "id": 2,
+    "name": "Another Beer",
+    "flavor_profile1": "Hoppy",
+    "flavor_profile2": "Delicious",
+    "flavor_profile3": "Fruity",
+    "flavor_profile4": "Refreshing",
+    "flavor_profile5": "Tasty",
+    "description": "This is an awesome beer",
+    "kind": "Extra Pale Ale",
+    "brewery": "Yummy",
+    "created_at": "2015-03-09T21:58:34.371Z",
+    "updated_at": "2015-03-09T22:28:37.998Z"
+  }
+  ]
 }
 ```
