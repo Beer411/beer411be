@@ -31,6 +31,7 @@ private
                                  :flavor_profile5,
                                  :description,
                                  :kind,
-                                 :brewery)
+                                 :brewery,
+                                 :abv)
   end
 end
