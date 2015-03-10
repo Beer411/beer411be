@@ -46,7 +46,7 @@
 
 * beer: {flavor_profile1: flavor_profile1, flavor_profile2: flavor_profile2,
   flavor_profile3: flavor_profile3, flavor_profile4: flavor_profile4,
-  flavor_profile5: flavor_profile5, kind: kind, description: description, brewery: brewery }
+  flavor_profile5: flavor_profile5, kind: kind, description: description, brewery: brewery,   abv: abv}
 
 ```
 {
@@ -63,6 +63,7 @@
   "brewery": "Sweetwater",
   "created_at": "2015-03-09T21:57:27.447Z",
   "updated_at": "2015-03-09T21:57:27.447Z"
+  "abv": "5.4%"
   }
 }
 ```
@@ -86,6 +87,7 @@
   "brewery": "Sweetwater",
   "created_at": "2015-03-09T21:57:27.447Z",
   "updated_at": "2015-03-09T21:57:27.447Z"
+  "abv": "5.4%"
   }
 }
 ```
@@ -109,6 +111,7 @@
     "brewery": "Sweetwater",
     "created_at": "2015-03-09T21:57:27.447Z",
     "updated_at": "2015-03-09T21:57:27.447Z"
+    "abv": "5.4%"
   },
   {
     "id": 2,
@@ -123,6 +126,7 @@
     "brewery": "Yummy",
     "created_at": "2015-03-09T21:58:34.371Z",
     "updated_at": "2015-03-09T22:28:37.998Z"
+    "abv": "5.4%"
   }
   ]
 }
