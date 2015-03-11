@@ -131,6 +131,35 @@
   ]
 }
 ```
+## Search for Beer
+
+### /beers/search
+
+###### Required Params
+
+* search: search query
+
+```
+{
+  "beer": [
+    {
+      "id": 3,
+      "name": "Chocolate Sombrero",
+      "flavor_profile1": "Hoppy",
+      "flavor_profile2": "Cinnamon",
+      "flavor_profile3": "Malty",
+      "flavor_profile4": "Chocolate",
+      "flavor_profile5": "Tasty",
+      "description": "Full bodied, strong, and delicious",
+      "kind": "Imperial Stout",
+      "brewery": "Clown Shoes",
+      "created_at": "2015-03-10T16:31:13.777Z",
+      "updated_at": "2015-03-10T16:31:13.777Z",
+      "abv": "9%"
+    }
+  ]
+}
+```
 
 ## Create a Bar/Restaurant/Store
 

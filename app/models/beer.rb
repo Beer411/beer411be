@@ -17,12 +17,12 @@ class Beer < ActiveRecord::Base
       ts_rank(to_tsvector(brewery), plainto_tsquery(#{sanitize(query)}))
       RANK
       where("name @@ :q or flavor_profile1 @@ :q or flavor_profile2 @@ :q or
-            flavor_profile3 @@ :q or flavor_profile4 @@ :q or flavor_profile5 @@ :q
+            flavor_profile3 @@ :q or flavor_profile4 @@ :q or flavor_profile5 @@ :q or
             kind @@ :q or brewery @@ :q", q: query).order("#{rank} desc")
     else
       all
     end
-  end
+end
 
 
 end
