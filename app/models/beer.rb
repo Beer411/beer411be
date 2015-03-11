@@ -22,7 +22,7 @@ class Beer < ActiveRecord::Base
     else
       all
     end
-end
+  end
 
 
 end

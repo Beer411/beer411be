@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/beers/list', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
 
+  post '/bars/search', to: 'bars#search', as: 'bars_search'
   get '/bars/list', to: 'bars#list', as: 'bars_list'
   resources :bars, only: [:create, :update, :show]
   # The priority is based upon order of creation: first created -> highest priority.

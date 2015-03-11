@@ -213,3 +213,25 @@
   }
 }
 ```
+
+## Search for Bar
+
+### /bars/search
+
+###### Required Params
+
+* search: search query
+
+```
+{
+  "bar": [
+    {
+      "id": 1,
+      "name": "Drinky Place",
+      "address": "Hoppy St., Atlanta Ga",
+      "created_at": "2015-03-11T03:23:04.173Z",
+      "updated_at": "2015-03-11T03:23:04.173Z"
+    }
+  ]
+}
+```
