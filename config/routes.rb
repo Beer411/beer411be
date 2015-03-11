@@ -4,6 +4,9 @@ Rails.application.routes.draw do
                                       sessions: "sessions" }
   get '/beers/list', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
+
+  get '/bars/list', to: 'bars#list', as: 'bars_list'
+  resources :bars, only: [:create, :update, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

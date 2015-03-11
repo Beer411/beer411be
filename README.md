@@ -3,7 +3,7 @@
 
 ## User Registration
 
-### /users
+### /users POST
 
 ###### Required params
 
@@ -19,7 +19,7 @@
 
 ## User Sign In
 
-### /users/sign_in
+### /users/sign_in POST
 
 ###### Required params
 
@@ -35,7 +35,7 @@
 
 ## Create a Beer
 
-### /beers
+### /beers POST
 
 ###### Required params
 
@@ -70,7 +70,7 @@
 
 ## Show a Specific Beer
 
-### /beers/:id
+### /beers/:id GET
 
 ```
 {
@@ -94,7 +94,7 @@
 
 ## Show a List of Beers
 
-### /beers/list
+### /beers/list GET
 ```
 {
   "beer": [
@@ -129,5 +129,58 @@
     "abv": "5.4%"
   }
   ]
+}
+```
+
+## Create a Bar/Restaurant/Store
+
+### /bars POST
+
+###### Required Params
+
+* auth_token
+* bar: {name: name, address: address}
+
+```
+{
+  "bar": {
+  "id": 1,
+  "name": "Drinky Place",
+  "address": "Hoppy St., Atlanta Ga",
+  "created_at": "2015-03-11T03:23:04.173Z",
+  "updated_at": "2015-03-11T03:23:04.173Z"
+  }
+}
+```
+
+## Show a Specific Bar/Restaurant/Store
+
+### /bars/:id GET
+
+```
+{
+  "bar": {
+  "id": 1,
+  "name": "Drinky Place",
+  "address": "Hoppy St., Atlanta Ga",
+  "created_at": "2015-03-11T03:23:04.173Z",
+  "updated_at": "2015-03-11T03:23:04.173Z"
+  }
+}
+```
+
+## Show all Bars/Restaurants/Stores
+
+### /bars/list GET
+
+```
+{
+  "bar": {
+  "id": 1,
+  "name": "Drinky Place",
+  "address": "Hoppy St., Atlanta Ga",
+  "created_at": "2015-03-11T03:23:04.173Z",
+  "updated_at": "2015-03-11T03:23:04.173Z"
+  }
 }
 ```
