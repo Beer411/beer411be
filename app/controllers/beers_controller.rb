@@ -17,7 +17,11 @@ class BeersController < ApplicationController
   end
 
   def list
-    @beer = Beer.all
+    if params[:search]
+      @beer = Beer.search(params[:search])
+    else
+      @beer = Beer.all
+    end
     render json: { beer: @beer }
   end
 
