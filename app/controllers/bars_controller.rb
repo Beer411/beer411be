@@ -12,6 +12,15 @@ class BarsController < ApplicationController
     end
   end
 
+  def search
+    if params[:search]
+      @bar = Bar.search(params[:search])
+    else
+      @beer = Bar.all
+    end
+    render json: { bar: @bar }
+  end
+
   def show
     @bar = Bar.find(params[:id])
     render json: { bar: @bar }
