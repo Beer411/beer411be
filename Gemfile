@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Searching method
+gem 'pg_search'
 # Devise for User Auth
 gem 'devise'
 # We love our frontenders

@@ -137,7 +137,7 @@
 
 ###### Required Params
 
-* search: search query
+* query: search query
 
 ```
 {
@@ -220,7 +220,7 @@
 
 ###### Required Params
 
-* search: search query
+* query: search query
 
 ```
 {

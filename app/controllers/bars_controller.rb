@@ -13,12 +13,12 @@ class BarsController < ApplicationController
   end
 
   def search
-    if params[:search]
-      @bar = Bar.search(params[:search])
+    if params[:query]
+      @bars = Bar.search(params[:query])
+      render json: { bars: @bars}
     else
-      @beer = Bar.all
+      render json: { message: "No query provided" }
     end
-    render json: { bar: @bar }
   end
 
   def show
