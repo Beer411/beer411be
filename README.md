@@ -133,7 +133,7 @@
 ```
 ## Search for Beer
 
-### /beers/search
+### /beers/search GET
 
 ###### Required Params
 
@@ -216,7 +216,7 @@
 
 ## Search for Bar
 
-### /bars/search
+### /bars/search GET
 
 ###### Required Params
 
