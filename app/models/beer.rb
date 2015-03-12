@@ -24,5 +24,10 @@ class Beer < ActiveRecord::Base
     end
   end
 
+  def json_bars
+    self.bars.map do |b|
+      {id: b.id, name: b.name, address: b.address}
+    end
+  end
 
 end

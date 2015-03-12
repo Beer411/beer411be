@@ -1,7 +1,7 @@
 class BarsController < ApplicationController
   before_action :authenticate_user_from_token! , :only => [:create]
 
-
+# This allows a user to create a bar/store/restaurant, must have auth_token
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
