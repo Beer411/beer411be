@@ -17,13 +17,14 @@ class BeersController < ApplicationController
   end
 
   def search
-    if params[:search]
-      @beer = Beer.search(params[:search])
+    if params[:query]
+      @beers = Beer.search(params[:query])
+      render json: { beers: @beers }
     else
-      @beer = Beer.all
+      render json: { message: "No query provided" }
     end
-    render json: { beer: @beer }
   end
+
 
   def list
     @beer = Beer.all
