@@ -1,6 +1,7 @@
 class Bar < ActiveRecord::Base
   has_many :glasses
   has_many :beers, through: :glasses
+  has_many :comments, :as => :commentable
   validates :address, uniqueness: true
   validates :name, presence: true
   include PgSearch
