@@ -2,6 +2,7 @@ class Beer < ActiveRecord::Base
 
   has_many :glasses
   has_many :bars, through: :glasses
+  has_many :comments, :as => :commentable
   validates :name, presence: true, uniqueness: true
   include PgSearch
   pg_search_scope :search, :against => [:name, :flavor_profile1,
