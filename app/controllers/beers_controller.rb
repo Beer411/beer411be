@@ -25,6 +25,13 @@ class BeersController < ApplicationController
     end
   end
 
+  def add_comment
+    @beer = Beer.find(params[:id])
+    @comment = @beer.comment.new
+    @comment.comment
+    @comment.save
+    render json { comment: @comment }
+  end
 
   def list
     @beer = Beer.all

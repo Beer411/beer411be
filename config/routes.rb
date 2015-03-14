@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
+  post 'beers/:id/add_comment', to: 'beers#add_comment', as: 'beers_new_comment'
   get '/beers/search', to: 'beers#search', as: 'beers_search'
   get '/beers/list', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
