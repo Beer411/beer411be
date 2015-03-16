@@ -31,6 +31,12 @@ class BeersController < ApplicationController
     render json: { comment: @comment }
   end
 
+  def comment
+    @beer= Beer.find(params[:id])
+    @comment = @beer.comments.all
+    render json: { comments: @comment}
+  end
+
   def list
     @beer = Beer.all
     render json: { beer: @beer }
