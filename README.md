@@ -1,6 +1,6 @@
 ## Heroku Link: https://calm-scrubland-8623.herokuapp.com
 
-
+# USERS
 ## User Registration
 
 ### /users POST
@@ -32,7 +32,7 @@
   }
 }
 ```
-
+# BEERS
 ## Create a Beer
 
 ### /beers POST
@@ -183,7 +183,7 @@
 }
 
 ```
-
+# BARS
 ## Create a Bar/Restaurant/Store
 
 ### /bars POST
