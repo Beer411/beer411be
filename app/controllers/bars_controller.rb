@@ -32,6 +32,12 @@ class BarsController < ApplicationController
     render json: { comment: @comment }
   end
 
+  def comment
+    @bar= Bar.find(params[:id])
+    @comment = @bar.comments.all
+    render json: { comments: @comment}
+  end
+
   def list
     @bar = Bar.all
     render json: { bar: @bar }

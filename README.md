@@ -11,8 +11,8 @@
 ```
 {
   "user": {
-  "email": "b@b.com",
-  "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
+    "email": "b@b.com",
+    "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
   }
 }
 ```
@@ -27,8 +27,8 @@
 ```
 {
   "user": {
-  "email": "b@b.com",
-  "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
+    "email": "b@b.com",
+    "authentication_token": "mFUzs_fcZ5dN_dLsuKHU"
   }
 }
 ```
@@ -51,19 +51,19 @@
 ```
 {
   "beer": {
-  "id": 1,
-  "name": "Sweetwater 420",
-  "flavor_profile1": "Hoppy",
-  "flavor_profile2": "Delicious",
-  "flavor_profile3": "Fruity",
-  "flavor_profile4": "Refreshing",
-  "flavor_profile5": "Tasty",
-  "description": "This is an awesome beer",
-  "kind": "Extra Pale Ale",
-  "brewery": "Sweetwater",
-  "created_at": "2015-03-09T21:57:27.447Z",
-  "updated_at": "2015-03-09T21:57:27.447Z"
-  "abv": "5.4%"
+    "id": 1,
+    "name": "Sweetwater 420",
+    "flavor_profile1": "Hoppy",
+    "flavor_profile2": "Delicious",
+    "flavor_profile3": "Fruity",
+    "flavor_profile4": "Refreshing",
+    "flavor_profile5": "Tasty",
+    "description": "This is an awesome beer",
+    "kind": "Extra Pale Ale",
+    "brewery": "Sweetwater",
+    "created_at": "2015-03-09T21:57:27.447Z",
+    "updated_at": "2015-03-09T21:57:27.447Z"
+    "abv": "5.4%"
   }
 }
 ```
@@ -75,19 +75,19 @@
 ```
 {
   "beer": {
-  "id": 1,
-  "name": "Sweetwater 420",
-  "flavor_profile1": "Hoppy",
-  "flavor_profile2": "Delicious",
-  "flavor_profile3": "Fruity",
-  "flavor_profile4": "Refreshing",
-  "flavor_profile5": "Tasty",
-  "description": "This is an awesome beer",
-  "kind": "Extra Pale Ale",
-  "brewery": "Sweetwater",
-  "created_at": "2015-03-09T21:57:27.447Z",
-  "updated_at": "2015-03-09T21:57:27.447Z"
-  "abv": "5.4%"
+    "id": 1,
+    "name": "Sweetwater 420",
+    "flavor_profile1": "Hoppy",
+    "flavor_profile2": "Delicious",
+    "flavor_profile3": "Fruity",
+    "flavor_profile4": "Refreshing",
+    "flavor_profile5": "Tasty",
+    "description": "This is an awesome beer",
+    "kind": "Extra Pale Ale",
+    "brewery": "Sweetwater",
+    "created_at": "2015-03-09T21:57:27.447Z",
+    "updated_at": "2015-03-09T21:57:27.447Z"
+    "abv": "5.4%"
   }
 }
 ```
@@ -163,7 +163,7 @@
 
 ## Add Comments to a Beer
 
-### /beers/:id/add_comment
+### /beers/:id/add_comment POST
 
 ###### Required Params
 
@@ -173,16 +173,44 @@
 ```
 {
   "comment": {
-  "id": 14,
-  "text": "This beer is awesome",
-  "commentable_id": 1,
-  "commentable_type": "Beer",
-  "created_at": "2015-03-16T17:01:39.493Z",
-  "updated_at": "2015-03-16T17:01:39.493Z"
+    "id": 14,
+    "text": "This beer is awesome",
+    "commentable_id": 1,
+    "commentable_type": "Beer",
+    "created_at": "2015-03-16T17:01:39.493Z",
+    "updated_at": "2015-03-16T17:01:39.493Z"
   }
 }
 
 ```
+## Show All Comments for a Beer
+
+### beers/:id/comments GET
+
+```
+{
+  "comments": [
+    {
+      "commentable_id": 1,
+      "id": 14,
+      "text": "This beer is awesome",
+      "commentable_type": "Beer",
+      "created_at": "2015-03-16T17:01:39.493Z",
+      "updated_at": "2015-03-16T17:01:39.493Z"
+    },
+    {
+      "commentable_id": 1,
+      "id": 11,
+      "text": "Yay! Beer!",
+      "commentable_type": "Beer",
+      "created_at": "2015-03-16T16:45:48.013Z",
+      "updated_at": "2015-03-16T16:45:48.013Z"
+    },
+  ]
+}
+
+```
+
 # BARS
 ## Create a Bar/Restaurant/Store
 
@@ -196,11 +224,11 @@
 ```
 {
   "bar": {
-  "id": 1,
-  "name": "Drinky Place",
-  "address": "Hoppy St., Atlanta Ga",
-  "created_at": "2015-03-11T03:23:04.173Z",
-  "updated_at": "2015-03-11T03:23:04.173Z"
+    "id": 1,
+    "name": "Drinky Place",
+    "address": "Hoppy St., Atlanta Ga",
+    "created_at": "2015-03-11T03:23:04.173Z",
+    "updated_at": "2015-03-11T03:23:04.173Z"
   }
 }
 ```
@@ -212,11 +240,11 @@
 ```
 {
   "bar": {
-  "id": 1,
-  "name": "Drinky Place",
-  "address": "Hoppy St., Atlanta Ga",
-  "created_at": "2015-03-11T03:23:04.173Z",
-  "updated_at": "2015-03-11T03:23:04.173Z"
+    "id": 1,
+    "name": "Drinky Place",
+    "address": "Hoppy St., Atlanta Ga",
+    "created_at": "2015-03-11T03:23:04.173Z",
+    "updated_at": "2015-03-11T03:23:04.173Z"
   }
 }
 ```
@@ -228,11 +256,11 @@
 ```
 {
   "bar": {
-  "id": 1,
-  "name": "Drinky Place",
-  "address": "Hoppy St., Atlanta Ga",
-  "created_at": "2015-03-11T03:23:04.173Z",
-  "updated_at": "2015-03-11T03:23:04.173Z"
+    "id": 1,
+    "name": "Drinky Place",
+    "address": "Hoppy St., Atlanta Ga",
+    "created_at": "2015-03-11T03:23:04.173Z",
+    "updated_at": "2015-03-11T03:23:04.173Z"
   }
 }
 ```
@@ -261,7 +289,7 @@
 
 ## Add Comments to Bar
 
-### /bars/:id/add_comment
+### /bars/:id/add_comment POST
 
 ###### Required Params
 
@@ -271,13 +299,48 @@
 ```
 {
   "comment": {
-  "id": 13,
-  "text": "This bar is awesome",
-  "commentable_id": 1,
-  "commentable_type": "Bar",
-  "created_at": "2015-03-16T16:57:25.688Z",
-  "updated_at": "2015-03-16T16:57:25.688Z"
+    "id": 13,
+    "text": "This bar is awesome",
+    "commentable_id": 1,
+    "commentable_type": "Bar",
+    "created_at": "2015-03-16T16:57:25.688Z",
+    "updated_at": "2015-03-16T16:57:25.688Z"
   }
 }
 
+```
+
+## Show all Comments for a Bar
+
+### /bars/:id/comments GET
+
+```
+{
+  "comments": [
+    {
+      "commentable_id": 1,
+      "id": 13,
+      "text": "This beer is awesome",
+      "commentable_type": "Bar",
+      "created_at": "2015-03-16T16:57:25.688Z",
+      "updated_at": "2015-03-16T16:57:25.688Z"
+    },
+    {
+      "commentable_id": 1,
+      "id": 12,
+      "text": "Yay! Beer!",
+      "commentable_type": "Bar",
+      "created_at": "2015-03-16T16:50:32.968Z",
+      "updated_at": "2015-03-16T16:50:32.968Z"
+    },
+    {
+      "commentable_id": 1,
+      "id": 4,
+      "text": "BOOO!",
+      "commentable_type": "Bar",
+      "created_at": "2015-03-13T18:50:42.508Z",
+      "updated_at": "2015-03-13T18:50:42.508Z"
+    }
+  ]
+}
 ```

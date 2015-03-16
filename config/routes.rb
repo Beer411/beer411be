@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
+  get 'beers/:id/comments', to: 'beers#comment', as: 'beers_comment'
   post 'beers/:id/add_comment', to: 'beers#add_comment', as: 'beers_new_comment'
   get '/beers/search', to: 'beers#search', as: 'beers_search'
   get '/beers', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
 
+  get 'bars/:id/comments', to: 'bars#comment', as: 'bars_comment'
   post 'bars/:id/add_comment', to: 'bars#add_comment', as: 'bars_new_comment'
   get '/bars/search', to: 'bars#search', as: 'bars_search'
   get '/bars', to: 'bars#list', as: 'bars_list'
