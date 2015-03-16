@@ -1,5 +1,5 @@
 class BeersController < ApplicationController
-  before_action :authenticate_user_from_token! , :only => [:create]
+  before_action :authenticate_user_from_token! , :only => [:create, :add_comment]
 
   def create
     @beer = Beer.new(beer_params)
@@ -27,10 +27,8 @@ class BeersController < ApplicationController
 
   def add_comment
     @beer = Beer.find(params[:id])
-    @comment = @beer.comment.new
-    @comment.comment
-    @comment.save
-    render json { comment: @comment }
+    @comment = @beer.comments.create(comment_params)
+    render json: { comment: @comment }
   end
 
   def list
@@ -50,5 +48,9 @@ private
                                  :kind,
                                  :brewery,
                                  :abv)
+  end
+
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end

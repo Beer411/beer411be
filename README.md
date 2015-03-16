@@ -94,7 +94,7 @@
 
 ## Show a List of Beers
 
-### /beers/list GET
+### /beers GET
 ```
 {
   "beer": [
@@ -161,6 +161,29 @@
 }
 ```
 
+## Add Comments to a Beer
+
+### /beers/:id/add_comment
+
+###### Required Params
+
+* auth_token
+* comment: { text: text }
+
+```
+{
+  "comment": {
+  "id": 14,
+  "text": "This beer is awesome",
+  "commentable_id": 1,
+  "commentable_type": "Beer",
+  "created_at": "2015-03-16T17:01:39.493Z",
+  "updated_at": "2015-03-16T17:01:39.493Z"
+  }
+}
+
+```
+
 ## Create a Bar/Restaurant/Store
 
 ### /bars POST
@@ -200,7 +223,7 @@
 
 ## Show all Bars/Restaurants/Stores
 
-### /bars/list GET
+### /bars GET
 
 ```
 {
@@ -234,4 +257,27 @@
     }
   ]
 }
+```
+
+## Add Comments to Bar
+
+### /bars/:id/add_comment
+
+###### Required Params
+
+* auth_token
+* comment: { text: text }
+
+```
+{
+  "comment": {
+  "id": 13,
+  "text": "This bar is awesome",
+  "commentable_id": 1,
+  "commentable_type": "Bar",
+  "created_at": "2015-03-16T16:57:25.688Z",
+  "updated_at": "2015-03-16T16:57:25.688Z"
+  }
+}
+
 ```
