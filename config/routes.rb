@@ -2,12 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
+  post 'beers/:id/add_comment', to: 'beers#add_comment', as: 'beers_new_comment'
   get '/beers/search', to: 'beers#search', as: 'beers_search'
-  get '/beers/list', to: 'beers#list', as: 'beers_list'
+  get '/beers', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
 
+  post 'bars/:id/add_comment', to: 'bars#add_comment', as: 'bars_new_comment'
   get '/bars/search', to: 'bars#search', as: 'bars_search'
-  get '/bars/list', to: 'bars#list', as: 'bars_list'
+  get '/bars', to: 'bars#list', as: 'bars_list'
   resources :bars, only: [:create, :update, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
