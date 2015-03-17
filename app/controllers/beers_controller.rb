@@ -1,5 +1,7 @@
 class BeersController < ApplicationController
-  before_action :authenticate_user_from_token! , :only => [:create, :add_comment]
+  before_action :authenticate_user_from_token! , :only => [:create,
+                                                           :add_comment,
+                                                           :add_bar]
 
   def create
     @beer = Beer.new(beer_params)
@@ -13,7 +15,8 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
-    render json: { beer: @beer }
+    render json: { beer: @beer,
+                   bars: @beer.json_bars }
   end
 
   def search
@@ -39,7 +42,13 @@ class BeersController < ApplicationController
 
   def list
     @beer = Beer.all
-    render json: { beer: @beer }
+    render json: { beer: @beer}
+  end
+
+  def add_bar
+    @beer = Beer.find(params[:id])
+    @glass = @beer.glasses.create(glass_params)
+    render json: { bars: @beer.bars}
   end
 
 private
@@ -58,5 +67,9 @@ private
 
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def glass_params
+    params.require(:glass).permit(:beer_id, :bar_id)
   end
 end

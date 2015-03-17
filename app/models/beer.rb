@@ -12,7 +12,11 @@ class Beer < ActiveRecord::Base
                                         :using => {
                                           :tsearch => { :prefix => true }
                                         }
-
+  def json_bars
+    self.bars.map do |bar|
+      { id: bar.id, name: bar.name, address: bar.address }
+    end
+  end
 
 
 
