@@ -211,6 +211,19 @@
 
 ```
 
+## Add Bar to Beer
+
+### /beers/:id/add_bar
+
+###### Require Params
+
+* auth_token
+* glass {bar_id: bar_id, beer_id: beer_id}
+
+```
+This returns the same as the Show a Specific Beer method, but with the new bar added
+```
+
 # BARS
 ## Create a Bar/Restaurant/Store
 
@@ -240,12 +253,39 @@
 ```
 {
   "bar": {
-    "id": 1,
-    "name": "Drinky Place",
-    "address": "Hoppy St., Atlanta Ga",
-    "created_at": "2015-03-11T03:23:04.173Z",
-    "updated_at": "2015-03-11T03:23:04.173Z"
-  }
+    "id": 3,
+    "name": "Manuel's Tavern",
+    "address": "Midtown, Atlanta, Ga",
+    "created_at": "2015-03-17T14:18:20.566Z",
+    "updated_at": "2015-03-17T14:18:20.566Z",
+    "description": "People like this place a lot."
+  },
+  "beers": [
+    {
+      "id": 3,
+      "name": "Chocolate Sombrero",
+      "flavor_profile1": "Hoppy",
+      "flavor_profile2": "Cinnamon",
+      "flavor_profile3": "Malty",
+      "flavor_profile4": "Chocolate",
+      "flavor_profile5": "Tasty",
+      "abv": "9%",
+      "kind": "Imperial Stout",
+      "description": "Full bodied, strong, and delicious"
+    },
+    {
+      "id": 2,
+      "name": "Another Beer",
+      "flavor_profile1": "Hoppy",
+      "flavor_profile2": "Delicious",
+      "flavor_profile3": "Fruity",
+      "flavor_profile4": "Refreshing",
+      "flavor_profile5": "Tasty",
+      "abv": null,
+      "kind": "Extra Pale Ale",
+      "description": "This is an awesome beer"
+    }
+  ]
 }
 ```
 
@@ -343,4 +383,17 @@
     }
   ]
 }
+```
+
+## Add a Beer to a Bar
+
+### /bars/:id/add_beer POST
+
+######  Required Params
+
+* auth_token
+* glass: { bar_id: bar_id, beer_id: beer_id:}
+
+```
+This returns the same as the Bar Show method, with the new beer added.
 ```
