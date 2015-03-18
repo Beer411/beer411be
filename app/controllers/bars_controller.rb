@@ -3,7 +3,6 @@ class BarsController < ApplicationController
                                                            :add_comment,
                                                            :add_beer]
 
-# This allows a user to create a bar/store/restaurant, must have auth_token
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
