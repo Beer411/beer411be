@@ -9,6 +9,19 @@ class Bar < ActiveRecord::Base
                                                                       :tsearch => {:prefix => true}
                                                                     }
 
+  def json_beers
+    self.beers.map do |beer|
+      { id: beer.id, name: beer.name,
+        flavor_profile1: beer.flavor_profile1,
+        flavor_profile2: beer.flavor_profile2,
+        flavor_profile3: beer.flavor_profile3,
+        flavor_profile4: beer.flavor_profile4,
+        flavor_profile5: beer.flavor_profile5,
+        abv: beer.abv, kind: beer.kind,
+        description: beer.description }
+      end
+    end
+
 
 # Keeping the PostgreSql code for future reference
   # def self.search(query)

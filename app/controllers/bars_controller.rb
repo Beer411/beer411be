@@ -1,5 +1,7 @@
 class BarsController < ApplicationController
-  before_action :authenticate_user_from_token! , :only => [:create, :add_comment]
+  before_action :authenticate_user_from_token! , :only => [:create,
+                                                           :add_comment,
+                                                           :add_beer]
 
 # This allows a user to create a bar/store/restaurant, must have auth_token
   def create
@@ -23,7 +25,7 @@ class BarsController < ApplicationController
 
   def show
     @bar = Bar.find(params[:id])
-    render json: { bar: @bar }
+    render json: { bar: @bar, beers: @bar.json_beers }
   end
 
   def add_comment
@@ -43,13 +45,25 @@ class BarsController < ApplicationController
     render json: { bar: @bar }
   end
 
+  def add_beer
+    @bar = Bar.find(params[:id])
+    @glass = @bar.glasses.create(glass_params)
+    render json: { bars: @bar.beers}
+  end
+
+
 private
   def bar_params
     params.require(:bar).permit(:name,
-                                :address)
+                                :address,
+                                :description)
   end
 
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def glass_params
+    params.require(:glass).permit(:beer_id, :bar_id)
   end
 end
