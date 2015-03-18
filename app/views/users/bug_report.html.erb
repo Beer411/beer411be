@@ -1,0 +1,9 @@
+<%= form_for :bug_report, url: bug_submit_path, :html => { :method => :post } do |f| %>
+
+<p>
+  <b>Please leave a comment or complaint about our website:</b><br>
+  <%= f.text_area :message %>
+</p>
+<%= f.submit "Send" %>
+
+<% end %>

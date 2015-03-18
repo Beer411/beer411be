@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
 
-def bug_report
-  message = params[:bugs][:message]
-  BugMailer.bugs(user, message).deliver
-  redirect_to beers_list_path
-end
+  def bug_report
 
+    render :bug_report
+
+    # redirect_to beers_list_path
+  end
+
+  def submit
+    BugMailer.bugs(params[:message]).deliver_now
+    render json: { message: 'Message Sent' }
+  end
 end

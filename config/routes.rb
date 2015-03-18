@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
-  post '/bug_report', to: 'users#bug_report', as: 'bug_report'
-
+  get '/bug_report', to: 'users#bug_report', as: 'bug_report'
+  post 'bug_submit', to: 'users#submit', as: 'bug_submit'
   get '/beers/search', to: 'beers#search', as: 'beers_search'
   post 'beers/:id/add_bar', to: 'beers#add_bar', as: 'beers_new_bar'
   get 'beers/:id/comments', to: 'beers#comment', as: 'beers_comment'
