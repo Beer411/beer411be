@@ -2,9 +2,10 @@ class BugMailer < ApplicationMailer
   default from: 'no-reply@calm-scrubland-8623.herokuapp.com'
   default to: 'dvaugha1@gmail.com'
 
-  def bugs(user)
+  def bugs(user, message)
     @user = user
-    mail(subject: "Another fucking bug report")
+    @message = message
+    mail(subject: "Another fucking bug report", date: Time.now)
   end
 
 end
