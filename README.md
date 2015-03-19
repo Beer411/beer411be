@@ -39,7 +39,7 @@
 
 ###### Required params
 
-* auth_token
+* auth-token
 * beer: {name: name}
 
 ###### Optional Params
@@ -167,7 +167,7 @@
 
 ###### Required Params
 
-* auth_token
+* auth-token
 * comment: { text: text }
 
 ```
@@ -217,7 +217,7 @@
 
 ###### Require Params
 
-* auth_token
+* auth-token
 * glass {bar_id: bar_id, beer_id: beer_id}
 
 ```
@@ -231,7 +231,7 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 
 ###### Required Params
 
-* auth_token
+* auth-token
 * bar: {name: name, address: address}
 
 ```
@@ -333,7 +333,7 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 
 ###### Required Params
 
-* auth_token
+* auth-token
 * comment: { text: text }
 
 ```
@@ -391,7 +391,7 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 
 ######  Required Params
 
-* auth_token
+* auth-token
 * glass: { bar_id: bar_id, beer_id: beer_id:}
 
 ```
