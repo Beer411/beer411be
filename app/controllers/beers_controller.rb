@@ -70,6 +70,6 @@ private
   end
 
   def glass_params
-    params.require(:glass).permit(:beer_id, :bar_id)
+    params.require(:glass).permit(:bar_id)
   end
 end

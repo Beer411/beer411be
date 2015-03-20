@@ -218,7 +218,7 @@
 ###### Require Params
 
 * auth-token
-* glass {bar_id: bar_id, beer_id: beer_id}
+* glass {bar_id: bar_id}
 
 ```
 This returns the same as the Show a Specific Beer method, but with the new bar added
@@ -392,7 +392,7 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 ######  Required Params
 
 * auth-token
-* glass: { bar_id: bar_id, beer_id: beer_id:}
+* glass: { beer_id: beer_id:}
 
 ```
 This returns the same as the Bar Show method, with the new beer added.
