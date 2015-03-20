@@ -4,15 +4,16 @@ Rails.application.routes.draw do
                                       sessions: "sessions" }
   get '/bug_report', to: 'users#bug_report', as: 'bug_report'
   post 'bug_submit', to: 'users#submit', as: 'bug_submit'
+
   get '/beers/search', to: 'beers#search', as: 'beers_search'
-  post 'beers/:id/add_bar', to: 'beers#add_bar', as: 'beers_new_bar'
+  put 'beers/:id/add_bar', to: 'beers#add_bar', as: 'beers_new_bar'
   get 'beers/:id/comments', to: 'beers#comment', as: 'beers_comment'
   post 'beers/:id/add_comment', to: 'beers#add_comment', as: 'beers_new_comment'
   get '/beers', to: 'beers#list', as: 'beers_list'
   resources :beers, only: [:create, :update, :show]
 
   get '/bars/search', to: 'bars#search', as: 'bars_search'
-  post 'bars/:id/add_beer', to: 'bars#add_beer', as: 'bars_new_beer'
+  put 'bars/:id/add_beer', to: 'bars#add_beer', as: 'bars_new_beer'
   get 'bars/:id/comments', to: 'bars#comment', as: 'bars_comment'
   post 'bars/:id/add_comment', to: 'bars#add_comment', as: 'bars_new_comment'
   get '/bars', to: 'bars#list', as: 'bars_list'

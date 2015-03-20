@@ -220,7 +220,7 @@
 
 ## Add Bar to Beer
 
-### /beers/:id/add_bar
+### /beers/:id/add_bar PUT
 
 ###### Require Params
 
@@ -394,7 +394,7 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 
 ## Add a Beer to a Bar
 
-### /bars/:id/add_beer POST
+### /bars/:id/add_beer PUT
 
 ######  Required Params
 
