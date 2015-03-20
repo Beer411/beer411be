@@ -75,20 +75,27 @@
 ```
 {
   "beer": {
-    "id": 1,
-    "name": "Sweetwater 420",
-    "flavor_profile1": "Hoppy",
-    "flavor_profile2": "Delicious",
-    "flavor_profile3": "Fruity",
-    "flavor_profile4": "Refreshing",
+    "id": 2,
+    "name": "Guiness Extra Draught",
+    "flavor_profile1": "Stout",
+    "flavor_profile2": "Heavy",
+    "flavor_profile3": "Chocolate",
+    "flavor_profile4": "Malty",
     "flavor_profile5": "Tasty",
-    "description": "This is an awesome beer",
-    "kind": "Extra Pale Ale",
-    "brewery": "Sweetwater",
-    "created_at": "2015-03-09T21:57:27.447Z",
-    "updated_at": "2015-03-09T21:57:27.447Z"
-    "abv": "5.4%"
-  }
+    "description": "This dark Irish beer is basically the most famous one.",
+    "kind": "Irish Dry Stout",
+    "brewery": "Guiness",
+    "created_at": "2015-03-20T18:53:20.092Z",
+    "updated_at": "2015-03-20T18:53:20.092Z",
+    "abv": 4.2
+  },
+  "bars": [
+    {
+      "id": 2,
+      "name": "Buds",
+      "address": "Atlanta, Ga"
+    }
+  ]
 }
 ```
 
