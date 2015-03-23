@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 # Pictures would be a good idea
-gem 'paperclip'
+gem 'paperclip', '~> 4.2'
+# S3 Storage!
+gem 'aws-sdk'
 # Searching method
 gem 'pg_search'
 # Devise for User Auth
