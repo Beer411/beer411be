@@ -4,6 +4,12 @@ class Beer < ActiveRecord::Base
   has_many :bars, through: :glasses
   has_many :comments, :as => :commentable
   validates :name, presence: true, uniqueness: true
+  has_attached_file :avatar, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   include PgSearch
   pg_search_scope :search, :against => [:name, :flavor_profile1,
                                         :flavor_profile2, :flavor_profile3,

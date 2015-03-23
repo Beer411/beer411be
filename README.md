@@ -46,7 +46,7 @@
 
 * beer: {flavor_profile1: flavor_profile1, flavor_profile2: flavor_profile2,
   flavor_profile3: flavor_profile3, flavor_profile4: flavor_profile4,
-  flavor_profile5: flavor_profile5, kind: kind, description: description, brewery: brewery,   abv: abv}
+  flavor_profile5: flavor_profile5, kind: kind, description: description, brewery: brewery,   abv: abv, avatar: png/jpg/jpeg/gif file}
 
 ```
 {
@@ -64,6 +64,10 @@
     "created_at": "2015-03-09T21:57:27.447Z",
     "updated_at": "2015-03-09T21:57:27.447Z"
     "abv": "5.4%"
+    "avatar_file_name": "testbeer.jpg",
+    "avatar_content_type": "image/jpeg",
+    "avatar_file_size": 49823,
+    "avatar_updated_at": "2015-03-23T16:24:46.766Z"
   }
 }
 ```
@@ -88,6 +92,10 @@
     "created_at": "2015-03-20T18:53:20.092Z",
     "updated_at": "2015-03-20T18:53:20.092Z",
     "abv": 4.2
+    "avatar_file_name": "testbeer.jpg",
+    "avatar_content_type": "image/jpeg",
+    "avatar_file_size": 49823,
+    "avatar_updated_at": "2015-03-23T16:24:46.766Z"
   },
   "bars": [
     {
@@ -105,36 +113,44 @@
 ```
 {
   "beer": [
-  {
-    "id": 1,
-    "name": "Sweetwater 420",
-    "flavor_profile1": "Hoppy",
-    "flavor_profile2": "Delicious",
-    "flavor_profile3": "Fruity",
-    "flavor_profile4": "Refreshing",
-    "flavor_profile5": "Tasty",
-    "description": "This is an awesome beer",
-    "kind": "Extra Pale Ale",
-    "brewery": "Sweetwater",
-    "created_at": "2015-03-09T21:57:27.447Z",
-    "updated_at": "2015-03-09T21:57:27.447Z"
-    "abv": "5.4%"
-  },
-  {
-    "id": 2,
-    "name": "Another Beer",
-    "flavor_profile1": "Hoppy",
-    "flavor_profile2": "Delicious",
-    "flavor_profile3": "Fruity",
-    "flavor_profile4": "Refreshing",
-    "flavor_profile5": "Tasty",
-    "description": "This is an awesome beer",
-    "kind": "Extra Pale Ale",
-    "brewery": "Yummy",
-    "created_at": "2015-03-09T21:58:34.371Z",
-    "updated_at": "2015-03-09T22:28:37.998Z"
-    "abv": "5.4%"
-  }
+    {
+      "id": 1,
+      "name": "Sweetwater 420",
+      "flavor_profile1": "Hoppy",
+      "flavor_profile2": "Delicious",
+      "flavor_profile3": "Fruity",
+      "flavor_profile4": "Refreshing",
+      "flavor_profile5": "Tasty",
+      "description": "This is an awesome beer",
+      "kind": "Extra Pale Ale",
+      "brewery": "Sweetwater",
+      "created_at": "2015-03-09T21:57:27.447Z",
+      "updated_at": "2015-03-09T21:57:27.447Z"
+      "abv": "5.4%"
+      "avatar_file_name": "testbeer.jpg",
+      "avatar_content_type": "image/jpeg",
+      "avatar_file_size": 49823,
+      "avatar_updated_at": "2015-03-23T16:24:46.766Z"
+    },
+    {
+      "id": 2,
+      "name": "Another Beer",
+      "flavor_profile1": "Hoppy",
+      "flavor_profile2": "Delicious",
+      "flavor_profile3": "Fruity",
+      "flavor_profile4": "Refreshing",
+      "flavor_profile5": "Tasty",
+      "description": "This is an awesome beer",
+      "kind": "Extra Pale Ale",
+      "brewery": "Yummy",
+      "created_at": "2015-03-09T21:58:34.371Z",
+      "updated_at": "2015-03-09T22:28:37.998Z"
+      "abv": "5.4%"
+      "avatar_file_name": "testbeer.jpg",
+      "avatar_content_type": "image/jpeg",
+      "avatar_file_size": 49823,
+      "avatar_updated_at": "2015-03-23T16:24:46.766Z"
+    }
   ]
 }
 ```
@@ -163,6 +179,10 @@
       "created_at": "2015-03-10T16:31:13.777Z",
       "updated_at": "2015-03-10T16:31:13.777Z",
       "abv": "9%"
+      "avatar_file_name": "testbeer.jpg",
+      "avatar_content_type": "image/jpeg",
+      "avatar_file_size": 49823,
+      "avatar_updated_at": "2015-03-23T16:24:46.766Z"
     }
   ]
 }
@@ -240,15 +260,22 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
 
 * auth-token
 * bar: {name: name, address: address}
+###### Optional Params
+* bar {description: description, avatar: png/jpg/jpeg/gif file}
 
 ```
 {
   "bar": {
-    "id": 1,
-    "name": "Drinky Place",
-    "address": "Hoppy St., Atlanta Ga",
-    "created_at": "2015-03-11T03:23:04.173Z",
-    "updated_at": "2015-03-11T03:23:04.173Z"
+    "id": 3,
+    "name": "Manny's",
+    "address": "602 North Highland Avenue Northeast, Atlanta, GA",
+    "created_at": "2015-03-23T16:21:23.900Z",
+    "updated_at": "2015-03-23T16:21:23.900Z",
+    "description": null,
+    "avatar_file_name": "testbar.jpeg",
+    "avatar_content_type": "image/jpeg",
+    "avatar_file_size": 655690,
+    "avatar_updated_at": "2015-03-23T16:21:23.464Z"
   }
 }
 ```
@@ -266,6 +293,10 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
     "created_at": "2015-03-17T14:18:20.566Z",
     "updated_at": "2015-03-17T14:18:20.566Z",
     "description": "People like this place a lot."
+    "avatar_file_name": "testbar.jpeg",
+    "avatar_content_type": "image/jpeg",
+    "avatar_file_size": 655690,
+    "avatar_updated_at": "2015-03-23T16:21:23.464Z"
   },
   "beers": [
     {
@@ -308,6 +339,10 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
     "address": "Hoppy St., Atlanta Ga",
     "created_at": "2015-03-11T03:23:04.173Z",
     "updated_at": "2015-03-11T03:23:04.173Z"
+    "avatar_file_name": "testbar.jpeg",
+    "avatar_content_type": "image/jpeg",
+    "avatar_file_size": 655690,
+    "avatar_updated_at": "2015-03-23T16:21:23.464Z"
   }
 }
 ```
@@ -329,6 +364,10 @@ This returns the same as the Show a Specific Beer method, but with the new bar a
       "address": "Hoppy St., Atlanta Ga",
       "created_at": "2015-03-11T03:23:04.173Z",
       "updated_at": "2015-03-11T03:23:04.173Z"
+      "avatar_file_name": "testbar.jpeg",
+      "avatar_content_type": "image/jpeg",
+      "avatar_file_size": 655690,
+      "avatar_updated_at": "2015-03-23T16:21:23.464Z"
     }
   ]
 }

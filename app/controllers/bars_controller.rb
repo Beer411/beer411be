@@ -55,7 +55,8 @@ private
   def bar_params
     params.require(:bar).permit(:name,
                                 :address,
-                                :description)
+                                :description,
+                                :avatar)
   end
 
   def comment_params

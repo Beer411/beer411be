@@ -4,6 +4,12 @@ class Bar < ActiveRecord::Base
   has_many :comments, :as => :commentable
   validates :address, uniqueness: true
   validates :name, presence: true
+  has_attached_file :avatar, styles: {
+    thumb: '100x100>',
+    square: '200x200#',
+    medium: '300x300>'
+  }
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   include PgSearch
   pg_search_scope :search, :against => [:name, :address], :using => {
                                                                       :tsearch => {:prefix => true}

@@ -62,7 +62,8 @@ private
                                  :description,
                                  :kind,
                                  :brewery,
-                                 :abv)
+                                 :abv,
+                                 :avatar)
   end
 
   def comment_params

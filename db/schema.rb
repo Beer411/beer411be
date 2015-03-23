@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320141538) do
+ActiveRecord::Schema.define(version: 20150323150249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,13 @@ ActiveRecord::Schema.define(version: 20150320141538) do
   create_table "bars", force: :cascade do |t|
     t.string   "name"
     t.text     "address"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.text     "description"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "bars", ["address"], name: "index_bars_on_address", using: :btree
@@ -37,9 +41,13 @@ ActiveRecord::Schema.define(version: 20150320141538) do
     t.text     "description"
     t.string   "kind"
     t.string   "brewery"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.float    "abv"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "beers", ["name"], name: "index_beers_on_name", using: :btree
