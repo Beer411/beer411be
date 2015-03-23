@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.1.5'
-# Send email with Mandrill
 
+# Pictures would be a good idea
+gem 'paperclip'
 # Searching method
 gem 'pg_search'
 # Devise for User Auth
